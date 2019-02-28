@@ -45,7 +45,7 @@ public class Animal {
         return zoos;
     }
 
-    public void setZooss(Set<Zoo> zooss) {
+    public void setZoos(Set<Zoo> zoos) {
         this.zoos = zoos;
     }
 }
