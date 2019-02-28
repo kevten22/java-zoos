@@ -15,7 +15,7 @@ public class Animal {
     private String animaltype;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "animalzoos",
+    @JoinTable(name = "zooanimals",
         joinColumns = {@JoinColumn(name = "animalid")},
         inverseJoinColumns = {@JoinColumn(name = "zooid")})
     @JsonIgnoreProperties("animal")
@@ -41,11 +41,11 @@ public class Animal {
         this.animaltype = animaltype;
     }
 
-    public Set<Zoo> getZooss() {
+    public Set<Zoo> getZoos() {
         return zoos;
     }
 
     public void setZooss(Set<Zoo> zooss) {
-        this.zoos = zooss;
+        this.zoos = zoos;
     }
 }
