@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Optional;
 
@@ -93,4 +94,21 @@ public class AdminController {
             return null;
         }
     }
+
+    @PostMapping("/zoos")
+    public Zoo addNewZoo(@RequestBody Zoo newzoo) throws URISyntaxException{
+        return zoorepos.save(newzoo);
+    }
+
+    @PostMapping("/phones")
+    public Telephone addNewTelephone(@RequestBody Telephone newphone) throws URISyntaxException{
+        return telerepos.save(newphone);
+    }
+
+    @PostMapping("/animals")
+    public Animal addNewAnimal(@RequestBody Animal newanimal) throws URISyntaxException{
+        return animalrepos.save(newanimal);
+    }
+
+
 }
